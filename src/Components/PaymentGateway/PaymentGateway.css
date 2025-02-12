@@ -1,0 +1,297 @@
+.paymentgateway {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+.paymentgateway h1 {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.paymentgateway hr {
+    border: none;
+    margin: 20px 0;
+    border-top: 1px solid #ddd;
+}
+
+.paymentgateway h2,
+.paymentgateway h3 {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.paymentgateway-cnt {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    margin-top: 50px;
+}
+
+.payment-products {
+    display: flex;
+    gap: 10px;
+    width: 300px;
+}
+
+.payment-products-cnt hr {
+    margin-bottom: 15px !important;
+}
+
+.payment-products .name {
+    font-size: 16px;
+    font-weight: 500;
+    word-wrap: break-word !important;
+    width: 170px;
+}
+
+.payment-products p {
+    font-size: 14px;
+}
+
+.payment-products .image-pay {
+    width: 120px !important;
+    height: 120px !important;
+    object-fit: cover;
+}
+
+.paymentgateway .left {
+    flex: 1;
+    margin-right: 20px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.paymentgateway .left h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.paymentgateway .delivery-options {
+    display: flex;
+    flex-direction: column;
+}
+
+.delivery-options .btns {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.paymentgateway .delivery-options button {
+    padding: 13px 20px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: none;
+    font-family: "Poppins";
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.btns button {
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ddd !important; 
+    color: rgb(0, 0, 0);
+}
+
+.btns button.selected {
+    border: 1px solid #000 !important;
+}
+
+.btns button:focus {
+    outline: none;
+}
+
+.paymentgateway .shipping input {
+    width: calc(100% - 20px );
+    padding: 13px 10px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 16px;
+    font-family: "Poppins";
+}
+
+.shipping p {
+    background-color: rgb(255, 255, 255);
+    width: auto;
+    font-size: 13px;
+    padding: 0 5px;
+    display: inline-block;
+    position: relative;
+    top: 12px;
+    left: 5px;
+}
+
+.cnt-ship {
+    display: flex;
+    gap: 20px;
+}
+
+.paymentgateway .delivery {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.paymentgateway .free,
+.paymentgateway .paid {
+    display: flex;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.paymentgateway .cartitems-total-item {
+    width: 300px;
+}
+
+.paymentgateway .right hr {
+    margin: 15px 0;
+    width: 300px !important;
+}
+
+.paymentgateway .cartitems-total-item {
+    padding: 5px 0;
+}
+
+.paymentgateway .free h4 span,
+.paymentgateway .paid h4 span {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.paymentgateway .free h4,
+.paymentgateway .paid h4 {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.paymentgateway .right {
+    margin-left: 20px;
+    padding: 20px;
+    width: 300px;
+}
+
+.paymentgateway .right h3 {
+    margin: 30px 0;
+}
+
+.paymentgateway .right h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.paymentgateway form {
+    width: calc( 100% + 60px );
+}
+
+.paymentgateway form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #000;
+    font-family: "Poppins";
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.StripeElement {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-top: -10px;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.test {
+    position: relative;
+    width: 520px;
+}
+
+.paymentgateway .error-message {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.paymentgateway .details-item {
+    margin-bottom: 30px;
+}
+
+.strange-thing {
+    margin-right: 10px !important;
+}
+
+.payment-products-cnt {
+    display: block;
+}
+
+@media (max-width: 1000px) {
+    .paymentgateway-cnt {
+        display: flex;
+        flex-direction: column-reverse;
+        width: calc(100% + 70px);
+        margin-left: 15px;
+    }
+
+    .paymentgateway .right {
+        padding: 0;
+        width: calc(100% - 60px);
+    }
+
+    .paymentgateway .right div,
+    .paymentgateway .right hr {
+        width: 100% !important;
+    }
+
+    .payment-products-cnt {
+        display: none;
+    }
+
+    .paymentgateway h1 {
+        font-size: 24px;
+    }
+
+    .cnt-ship div {
+        width: 100%;
+    }
+
+    .paymentgateway h2,
+    .paymentgateway h3 {
+        font-size: 18px !important;
+    }
+
+    .paymentgateway button {
+        font-size: 15px !important;
+    }
+
+    .paymentgateway svg {
+        transform: scale(0.9);
+    }
+
+    .test {
+        position: relative;
+        width: calc(100% - 60px) !important;
+    }
+
+    .paymentgateway .right h3 {
+        font-size: 16px !important;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+
+    .paymentgateway .cnt-ship {
+        gap: 10px;
+    }
+}

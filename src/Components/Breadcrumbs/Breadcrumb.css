@@ -1,0 +1,12 @@
+.breadcrumb {
+    display: flex;
+    align-self: center;
+    gap: 8px;
+    font-size: 16px;
+    color: #5e5e5e;
+    font-weight: 600;
+    margin: 30px 171px;
+    margin-top: 100px;
+    text-transform: capitalize;
+
+}

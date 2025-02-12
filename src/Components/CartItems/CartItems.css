@@ -1,0 +1,269 @@
+
+.cartitems{
+   display: flex;
+   align-items: start;
+   justify-content: center;
+   gap: 10px;
+   margin-top: 40px;
+}
+
+.cartitems-list {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cartitems h1 {
+    font-weight: 500;
+}
+
+.cartitems hr{
+    height: 1px;
+    background: #e2e2e2;
+    border: 0;
+}
+
+.cartitems-format-main{
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr;
+    padding: 20px 0px;
+    color: #707072;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+}
+
+.cartitems-format-main p {
+    font-size: 18px;
+    width: 500px;
+    color: #707072;
+    font-weight: 400;
+    margin-left: 30px;
+}
+
+.cartitems-format-main .name {
+    color: #000;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.cartitems-format-main .price {
+    bottom: 15px;
+    color: #000;
+    font-size: 22px;
+    position: absolute;
+    font-weight: 500;
+}
+
+.cartitems-format-main .old_price {
+    bottom: 40px;
+    text-decoration: line-through;
+    font-size: 16px;
+    position: absolute;
+}
+
+.cartitems-format-main .gift {
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+.cartitems-format{
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.carticon-product-icon{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.cartitems-remove-icon{
+    width: 15px;
+    margin: 0px 40px;
+    cursor: pointer;
+}
+
+.obj {
+    border: 1px solid #e2e2e2;
+    gap: 5px;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    padding: 0 !important;
+}
+
+.bx-trash {
+    margin-right: 5px;
+}
+
+.todf {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.obj i {
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 100%;
+}
+
+.obj i:hover {
+    background-color: #e2e2e2;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 100%;
+}
+
+.cartitems-quanity {
+    border: none;
+    background: #fff;
+    font-size: 18px;
+    font-family: "Poppins";
+}
+
+.cartitems-down {
+    display: flex;
+    width: 400px;
+    margin-bottom: 130px;
+}
+
+.cartitems-total {
+    flex: 1;
+    display: flex;
+    flex-direction: column; 
+    gap: 5px;
+}
+
+.cartitems-total-item {
+    display: flex;
+    justify-content: space-between; 
+    padding: 15px 0px;
+}
+
+.cartitems-total button {
+    width: 100%;
+    height: 58px;
+    outline: none;
+    border: none;
+    margin-top: 30px;
+    font-family: "Poppins";
+    background: #000000;
+    color: #fff; 
+    font-size: 16px; 
+    font-weight: 500; 
+    cursor: pointer;
+}
+
+.cartitems-total .paypal {
+    background: #eee;
+    color: #000; 
+    margin-top: 10px;
+    border: 1px solid #e2e2e2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cartitems-total img {
+    height: 20px;
+}
+
+.cartitems-promocode{
+    flex: 1;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+.cartitems-promocode p {
+    color: #555;
+}
+
+.cartitems hr {
+    height: 1px;
+    background: #e2e2e2;
+}
+
+.cartitems-promobox {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px; 
+    height: 40px;
+    border: 1px solid #eaeaea;
+}
+
+.cartitems-promobox input {
+    border: none;
+    outline: none;
+    font-weight: 400;
+    background: transparent;
+    font-size: 16px;
+    height: 37px;
+    font-family: "Poppins";
+}
+
+.cartitems-promobox button { 
+    width: 120px;
+    font-weight: 400;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+    font-family: "Poppins";
+}
+
+@media (max-width: 1000px) {
+    .cartitems h1,
+    .cartitems .mobile p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        margin-bottom: -10px;
+    }
+
+    .cartitems .mobile p {
+        font-size: 16px;
+        margin-bottom: 20px !important;
+    }
+
+    .cartitems .mobile span {
+        color: #707072;
+        margin-right: 10px;
+    }
+
+    .cartitems{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 40px;
+    }
+    
+    .cartitems-list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cartitems-list div {
+        padding: 10px;
+    }
+
+    .cartitems-down {
+        display: flex;
+        margin-top: 30px;
+        width: 80%;
+    }
+}

@@ -1,0 +1,102 @@
+.profile-cnt {
+    display: flex;
+    margin: 120px;
+}
+
+.profile-cnt h2 {
+    font-weight: 500;
+}
+
+.profile-cnt .right {
+    margin-right: 100px;
+}
+
+.profile-cnt .right h1 {
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 100px;
+}
+
+.profile-cnt .right ul {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.profile-cnt .right li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+    margin-left: -40px;
+}
+
+.profile-cnt .right li i {
+    font-size: 26px;
+}
+
+.profile-cnt .left {
+    width: 1000px;
+    margin-top: -20px;
+    display: flex;
+    align-items: start;
+}
+
+.profile-cnt .left div {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-desc {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-cnt .left img {
+    width: 200px;
+}
+
+.profile-desc h2 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.profile-desc p {
+    font-size: 16px;
+    color: #707070;
+    font-weight: 500;
+}
+
+.edit-profile-section {
+    display: flex;
+    width: 600px;
+    flex-direction: column;
+}
+
+.edit-profile-section input {
+    margin-bottom: 0px;
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    font-family: "Poppins";
+    outline: none;
+}
+
+.edit-profile-section p {
+    margin-top: 20px;
+}
+
+.edit-profile-section button {
+    width: 100%;
+    padding: 10px;
+    background: #000000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Poppins";
+
+}
