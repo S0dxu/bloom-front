@@ -63,7 +63,8 @@
 }
 
 .all-products hr {
-    width: 600%;
+    width: 100vw;
+    border-bottom: none;
 }
 
 @media (max-width: 1000px) {

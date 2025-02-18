@@ -143,7 +143,7 @@ const CartItems = (props) => {
                                             className='carticon-product-icon' 
                                         />
                                     </Link>
-                                    <div>
+                                    <div className='fuckyou'>
                                         <p className='name'>{product.name}</p>
                                         <p className='size'>size: {size}</p>
                                         <p className='gift'>Gift Options</p>
