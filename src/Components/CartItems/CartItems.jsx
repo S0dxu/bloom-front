@@ -15,7 +15,7 @@ const CartItems = (props) => {
                 const token = localStorage.getItem('auth-token');
                 if (!token) return;
 
-                const response = await fetch(`https://ah873hdsha98h2wuisah9872-nw0e.onrender.com/getfavorites`, {
+                const response = await fetch(`https://ah873hdsha98h2wuisah9872.onrender.com/getfavorites`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -44,8 +44,8 @@ const CartItems = (props) => {
             }
 
             const url = isFavorite
-                ? 'https://ah873hdsha98h2wuisah9872-nw0e.onrender.com/removefavorite'
-                : 'https://ah873hdsha98h2wuisah9872-nw0e.onrender.com/addfavorite';
+                ? 'https://ah873hdsha98h2wuisah9872.onrender.com/removefavorite'
+                : 'https://ah873hdsha98h2wuisah9872.onrender.com/addfavorite';
 
             const response = await fetch(url, {
                 method: 'POST',

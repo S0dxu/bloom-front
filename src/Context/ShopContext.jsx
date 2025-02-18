@@ -12,12 +12,12 @@ const ShopContextProvider = (props) => {
     const [cartItems, setCartItems] = useState(getDefaultCart());
 
     useEffect(() => {
-        fetch('https://ah873hdsha98h2wuisah9872-nw0e.onrender.com/allproducts')
+        fetch('https://ah873hdsha98h2wuisah9872.onrender.com/allproducts')
             .then((response) => response.json())
             .then((data) => setAll_Product(data));
 
         if (localStorage.getItem('auth-token')) {
-            fetch('https://ah873hdsha98h2wuisah9872-nw0e.onrender.com/getcart', {
+            fetch('https://ah873hdsha98h2wuisah9872.onrender.com/getcart', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',
@@ -46,7 +46,7 @@ const ShopContextProvider = (props) => {
             }
 
             if (localStorage.getItem('auth-token')) {
-                fetch('https://ah873hdsha98h2wuisah9872-nw0e.onrender.com/addtocart', {
+                fetch('https://ah873hdsha98h2wuisah9872.onrender.com/addtocart', {
                     method: 'POST',
                     headers: {
                         Accept: 'application/json',
@@ -81,7 +81,7 @@ const ShopContextProvider = (props) => {
             }
 
             if (localStorage.getItem('auth-token')) {
-                fetch('https://ah873hdsha98h2wuisah9872-nw0e.onrender.com/addtocart', {
+                fetch('https://ah873hdsha98h2wuisah9872.onrender.com/addtocart', {
                     method: 'POST',
                     headers: {
                         Accept: 'application/json',
@@ -106,7 +106,7 @@ const ShopContextProvider = (props) => {
     const removeToCart = (productKey) => {
         const [productId, size] = productKey.split('-');
 
-        fetch('https://ah873hdsha98h2wuisah9872-nw0e.onrender.com/removetocart', {
+        fetch('https://ah873hdsha98h2wuisah9872.onrender.com/removetocart', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',

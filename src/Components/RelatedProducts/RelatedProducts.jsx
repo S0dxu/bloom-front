@@ -12,7 +12,7 @@ const RelatedProducts = () => {
                 const token = localStorage.getItem('auth-token');
                 if (!token) return;
 
-                const response = await fetch(`https://ah873hdsha98h2wuisah9872-nw0e.onrender.com/getfavorites`, {
+                const response = await fetch(`https://ah873hdsha98h2wuisah9872.onrender.com/getfavorites`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -45,8 +45,8 @@ const RelatedProducts = () => {
 
             const isCurrentlyFavorite = favoriteStatus[productId];
             const url = isCurrentlyFavorite
-                ? 'https://ah873hdsha98h2wuisah9872-nw0e.onrender.com/removefavorite'
-                : 'https://ah873hdsha98h2wuisah9872-nw0e.onrender.com/addfavorite';
+                ? 'https://ah873hdsha98h2wuisah9872.onrender.com/removefavorite'
+                : 'https://ah873hdsha98h2wuisah9872.onrender.com/addfavorite';
 
             const response = await fetch(url, {
                 method: 'POST',
@@ -75,7 +75,7 @@ const RelatedProducts = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await fetch('https://ah873hdsha98h2wuisah9872-nw0e.onrender.com/allproducts');
+                const response = await fetch('https://ah873hdsha98h2wuisah9872.onrender.com/allproducts');
                 if (response.ok) {
                     const products = await response.json();
                     if (products.length > 0) {

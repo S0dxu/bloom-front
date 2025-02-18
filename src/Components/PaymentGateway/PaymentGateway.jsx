@@ -32,7 +32,7 @@ const CheckoutForm = ({ totalAmount }) => {
         setIsProcessing(true);
 
         try {
-            const response = await fetch('https://ah873hdsha98h2wuisah9872-nw0e.onrender.com/create-payment-intent', {
+            const response = await fetch('https://ah873hdsha98h2wuisah9872.onrender.com/create-payment-intent', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ amount: totalAmount * 100, currency: 'eur' }),

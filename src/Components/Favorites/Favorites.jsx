@@ -17,7 +17,7 @@ const Favorites = () => {
                     return;
                 }
 
-                const response = await fetch('https://ah873hdsha98h2wuisah9872-nw0e.onrender.com/getfavorites', {
+                const response = await fetch('https://ah873hdsha98h2wuisah9872.onrender.com/getfavorites', {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -27,7 +27,7 @@ const Favorites = () => {
 
                 const favoriteIds = await response.json();
 
-                const productResponse = await fetch('https://ah873hdsha98h2wuisah9872-nw0e.onrender.com/allproducts');
+                const productResponse = await fetch('https://ah873hdsha98h2wuisah9872.onrender.com/allproducts');
                 const allProducts = await productResponse.json();
 
                 setAllProducts(allProducts);
@@ -74,8 +74,8 @@ const Favorites = () => {
             }
 
             const url = favoriteStatus[productId]
-                ? 'https://ah873hdsha98h2wuisah9872-nw0e.onrender.com/removefavorite'
-                : 'https://ah873hdsha98h2wuisah9872-nw0e.onrender.com/addfavorite';
+                ? 'https://ah873hdsha98h2wuisah9872.onrender.com/removefavorite'
+                : 'https://ah873hdsha98h2wuisah9872.onrender.com/addfavorite';
 
             const response = await fetch(url, {
                 method: 'POST',

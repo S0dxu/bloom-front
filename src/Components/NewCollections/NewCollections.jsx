@@ -7,7 +7,7 @@ const NewCollections = () => {
     const [ new_collection, setNew_Collection ] = useState([])
 
     useEffect(() => {
-        fetch('https://ah873hdsha98h2wuisah9872-nw0e.onrender.com/newcollections')
+        fetch('https://ah873hdsha98h2wuisah9872.onrender.com/newcollections')
         .then((response) => response.json())
         .then((data) => setNew_Collection(data))
     }, [])
@@ -68,7 +68,7 @@ const AllProducts = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await fetch('https://ah873hdsha98h2wuisah9872-nw0e.onrender.com/allproducts');
+                const response = await fetch('https://ah873hdsha98h2wuisah9872.onrender.com/allproducts');
                 const data = await response.json();
                 setAllProducts(data);
             } catch (error) {
