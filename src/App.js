@@ -12,7 +12,7 @@ import women_banner from './Components/Assets/banner_women.png';
 import kids_banner from './Components/Assets/banner_kids.png';
 import Favorites from './Components/Favorites/Favorites';
 import { Link } from 'react-router-dom';
-import Profile from './Components/Profile/Profile';
+/* import Profile from './Components/Profile/Profile'; */
 import PaymentGateway from './Components/PaymentGateway/PaymentGateway';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
