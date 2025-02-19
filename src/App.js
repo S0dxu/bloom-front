@@ -1,4 +1,5 @@
 import './App.css';
+import { useEffect } from'react';
 import Navbar from './Components/Navbar/Navbar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Shop from './Pages/Shop';
@@ -22,6 +23,15 @@ import Unsuccess from './Components/Unsuccess/Unsuccess';
 const stripePromise = loadStripe('pk_test_51QUUgMRxVP5eUbdNbdLYmdtpz3YJK67GiRl9Y7X8OFhS2zM7PBGVPmtX9VrHvqD8LtBi8VysjfNTrr1wwCUnkhTE00ovW6wN22');
 
 function App() {
+  useEffect(() => {
+    const disableDrag = (event) => event.preventDefault();
+    document.addEventListener('dragstart', disableDrag);
+
+    return () => {
+      document.removeEventListener('dragstart', disableDrag);
+    };
+  }, []);
+
   return (
     <div>
       <BrowserRouter>
