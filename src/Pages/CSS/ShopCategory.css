@@ -35,6 +35,10 @@
     gap: 20px;
 }
 
+.navbar-bottom {
+    z-index: 99;
+}
+
 .shopcategory-indexSort p span {
     font-weight: 600;
 }

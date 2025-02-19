@@ -67,10 +67,14 @@
 }
 
 @media (max-width: 1300px) {
+    .relatedproducts {
+        padding: 5px;
+    }
+    
     .relatedproducts-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 10px;
+        gap: 5px;
     }
 
     .relatedproducts-item h2 {

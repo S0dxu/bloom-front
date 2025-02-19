@@ -72,6 +72,15 @@ const Navbar = () => {
         setIsSearchOpen(!isSearchOpen);
     };
 
+    const shopArrivals = document.querySelector(".navbar-bottom");
+
+    if (shopArrivals) {
+        shopArrivals.style.opacity = isSidebarOpen ? "0" : "1";
+        shopArrivals.style.transition = "opacity 0.3s ease-in-out";
+    }
+
+
+
     return (
         <div>
             <div className={`navbar ${showNavbar ? 'show' : 'hide'} ${isSidebarOpen ? 'navbar-opacity' : ''}`}>

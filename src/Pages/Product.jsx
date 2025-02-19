@@ -23,7 +23,6 @@ const Product = () => {
             {/* <Breadcrumb product={product}/> */}
             <ProductDisplay product={product} id={product.id} />
             <RelatedProducts product={product} id={product.id} />
-            <hr style={{ marginTop: '50px' }} />
         </div>
     );
 };

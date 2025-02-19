@@ -68,7 +68,6 @@ const ShopContextProvider = (props) => {
         });
     };
 
-    // Funzione separata per incrementare la quantità di un prodotto
     const incrementItemQuantity = (itemId, size) => {
         setCartItems((prev) => {
             const updatedCart = { ...prev };
