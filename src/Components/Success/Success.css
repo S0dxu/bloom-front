@@ -1,4 +1,6 @@
-.success-animation { margin:150px auto;}
+.success-animation { 
+    margin:150px auto;
+}
 
 .checkmark {
     width: 100px;
@@ -58,7 +60,7 @@
 .success {
     text-align: center;
     font-size: 20px;
-    width: 700px;
+    width: calc(100vw - 20px);
     position: relative;
     left: 50%;
     transform: translateX(-50%);

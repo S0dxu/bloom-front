@@ -161,14 +161,14 @@ const LoginSignup = () => {
                     </p>
                 )}
 
-                <div className="or">
+                {/* <div className="or">
                     <hr />
                     <p>or</p>
                     <hr />
                 </div>
                 <a className="use-google"><img src="https://static.cdnlogo.com/logos/g/23/goolge-icon.png" />{state} with Google</a>
                 <a className="use-google"><img src="https://th.bing.com/th/id/R.3d6a2ad56bc3403c5cfcc3efe09b741b?rik=7w0mZmIMOAqbkQ&pid=ImgRaw&r=0" />{state} with Microsoft</a>
-                <a className="use-google"><img src="https://th.bing.com/th/id/R.66dacd13d1a786cad40e9197159da06a?rik=6q8PoTr4wsCZCg&pid=ImgRaw&r=0" />{state} with Apple</a>
+                <a className="use-google"><img src="https://th.bing.com/th/id/R.66dacd13d1a786cad40e9197159da06a?rik=6q8PoTr4wsCZCg&pid=ImgRaw&r=0" />{state} with Apple</a> */}
             </div>
         </div>
     );

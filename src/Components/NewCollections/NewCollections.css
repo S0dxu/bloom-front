@@ -76,14 +76,22 @@
     }
 
     .all-products h1 {
-        padding: 60px 50px 10px 20px;
-        font-size: 22px;
+        padding: 60px 50px 10px 5px;
+        top: 5px;
+        position: relative;
+        font-size: 18px;
+    }
+
+    .cnt-products-header h2 {
+        font-size: 15px;
+        padding: 5px;
+        margin-bottom: 20px;
     }
 
     .all-products .sort {
         cursor: pointer;
         position: absolute;
-        bottom: 75px;
+        bottom: 59px;
         right: 20px;
         font-size: 16px;
     }

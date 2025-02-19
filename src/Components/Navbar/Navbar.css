@@ -254,9 +254,10 @@
         background: #fff;
         height: 70px;
         margin: 0 auto;
-        padding: 0 10px;
+        padding: 0;
         padding-right: 30px !important;
         position: relative;
+        margin-bottom: -70px;
     }
 
     .mobile2 {
