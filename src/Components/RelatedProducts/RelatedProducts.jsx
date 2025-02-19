@@ -98,7 +98,7 @@ const RelatedProducts = () => {
     }, []);
 
     const handleProductClick = (productId) => {
-        window.location.href = `http://localhost:3000/product/${productId}`;
+        window.location.href = `${productId}`;
     };
 
     return (
