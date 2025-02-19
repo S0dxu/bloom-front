@@ -20,7 +20,7 @@
 
 .size-quantity-message {
     position: relative;
-    top: 40px;
+    top: 5px;
 }
 
 .arrow {
@@ -255,6 +255,8 @@
         flex-direction: row;
         margin-left: 10px;
         margin-top: 0px;
+        flex-wrap: wrap;
+        flex-grow: 1;
     }
 
     .productdisplay-left {
@@ -268,6 +270,7 @@
 
     .productdisplay-size div {
         padding: 10px 0;
+
         width: calc(100%);
     }
 }

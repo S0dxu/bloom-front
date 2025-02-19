@@ -238,14 +238,14 @@ const ProductDisplay = (props) => {
                     {isFavorite ? 'REMOVE FROM FAVORITES' : 'ADD TO FAVORITES'}
                     <i className={`bx ${isFavorite ? 'bxs-heart' : 'bx-heart'}`}></i>
                 </button>
-                <div className="productdisplay-stars">
+                {/* <div className="productdisplay-stars">
                     <p>Recentions{renderRecensions(product.recensions)}</p>
                     <div>
                         <div>{renderStars(product.stars)}</div>
                         <i className='bx bx-chevron-down' ></i>
                     </div>
                 </div>
-                <hr />
+                <hr /> */}
             </div>
         </div>
     );
