@@ -138,3 +138,15 @@
         border: 1px solid #9191911f;
     }    
 }
+
+@media (max-width: 400px) {
+    .navbar-bottom {
+        flex-direction: column;
+        gap: 0;
+    }
+    .navbar-bottom p,
+    .navbar-bottom .Link {
+        right: 20px;
+        position: relative;
+    }
+}

@@ -29,6 +29,14 @@
     position: relative;
 }
 
+.loginsignup .field-container svg {
+    width: 24px;
+    top: 10px;
+    right: -5px;
+    position: absolute;
+    padding: 5px;
+}
+
 .loginsignup-fields .field-container {
     position: relative;
     width: 100%;
@@ -149,17 +157,34 @@
 
 @media (max-width: 500px) {
     .loginsignup-cnt {
-        width: 100%;
         margin: 0;
-        padding: 30px;
+        padding: 15px;
+    }
+
+    .loginsignup .field-container svg {
+        right: -12px;
+        position: absolute;
+        padding: 5px;
     }
 
     .loginsignup-cnt h1 {
         font-size: 22px;
     }
 
+    .loginsignup-cnt {
+        width: calc(100vw - 50px);
+    }
+
+    .loginsignup-fields {
+        width: 100%;
+    }
+
     .loginsignup-fields input {
-        width: calc(100% - 102px);
+        width: calc(100% - 45px);
+    }
+
+    .loginsignup-fields input {
+        padding-right: 40px;
     }
 
     .use-google,
@@ -167,7 +192,7 @@
     .or,
     .loginsignup h1,
     .loinsignup-login {
-        width: calc(100% - 60px);
+        width: calc(100% + 15px);
     }
     
 }
