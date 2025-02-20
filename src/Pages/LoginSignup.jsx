@@ -14,7 +14,13 @@ const LoginSignup = () => {
     const validateEmail = (email) => {
         const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
         return emailRegex.test(email);
-    };    
+    };
+
+    const validateUsername = (username) => {
+        if (username !== username.trim()) {
+            return false;
+        } else return true;
+    }
 
     const changeHandler = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -55,6 +61,11 @@ const LoginSignup = () => {
     };
     
     const signup = async () => {
+        if (!validateUsername(formData.username)) {
+            setErrorMessage("Username cannot contain spaces.");
+            return;
+        }
+
         if (!validateEmail(formData.email)) {
             setErrorMessage("Please enter a valid email address.");
             return;
