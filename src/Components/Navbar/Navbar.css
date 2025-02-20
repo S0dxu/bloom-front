@@ -89,6 +89,12 @@
     margin-right: -20px;
 }
 
+.navbar .prof {
+    width: 40px;
+    height: 40px;
+    border-radius: 100% !important;
+}
+
 .mobile2 {
     position: absolute;
     clip-path: inset(100%);

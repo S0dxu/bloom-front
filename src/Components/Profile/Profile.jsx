@@ -132,37 +132,37 @@ const Profile = () => {
 
     return (
         <div className='profile-cnt'>
-            <div className="right">
+            {/* <div className="right">
                 <h1>Settings</h1>
                 <ul>
                     <li onClick={() => setActiveSection('profile')}>
                         <i className='bx bx-user'></i>
                         <p>Profile</p>
                     </li>
-                    {/* <li onClick={() => setActiveSection('deliveryAddresses')}>
+                    <li onClick={() => setActiveSection('deliveryAddresses')}>
                         <i className='bx bx-package'></i>
                         <p>Delivery Addresses</p>
                     </li>
                     <li onClick={() => setActiveSection('paymentMethods')}>
                         <i className='bx bx-credit-card-alt'></i>
                         <p>Payment Methods</p>
-                    </li> */}
+                    </li>
                     <li onClick={() => setActiveSection('editProfile')}>
                         <i className='bx bx-edit-alt'></i>
                         <p>Edit Profile</p>
                     </li>
                     <li>
-                        <i class='bx bx-log-out-circle' ></i>
+                        <i className='bx bx-log-out-circle' ></i>
                         {localStorage.getItem('auth-token') ? (
                             <p onClick={handleLogout}>Logout</p>
                         ) : null}
                     </li>
                     <li onClick={() => setActiveSection('deleteProfile')}>
-                        <i class='bx bx-trash-alt' ></i>
+                        <i className='bx bx-trash-alt' ></i>
                         <p>Delete Account</p>
                     </li>
                 </ul>   
-            </div>
+            </div> */}
             <div className="left">
                 {activeSection === 'profile' && (
                     <div className="profile-section">

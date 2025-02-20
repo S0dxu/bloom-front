@@ -105,6 +105,7 @@ const Navbar = () => {
                 </ul>
                 <div className="nav-login-cart">
                     {/* <button className='search-btn' onClick={toggleSearch}><i className='bx bx-search'></i></button> */}
+                    <button className='prof'><Link className='pc' to={isLoggedIn ? "/profile" : "/login"}><i className='bx bx-user'></i></Link></button>
                     <button className='search-btn'><Link to="/getfavorites"><i className='bx bx-heart'></i></Link></button>
                     <button className='search-btn shop'>
                         <Link to="/cart">
@@ -153,11 +154,11 @@ const Navbar = () => {
                         {/* <li>
                             <i className='bx bx-help-circle'></i>
                             <Link className='Link' to="/help" onClick={toggleSidebar}>Help</Link>
-                        </li>
+                        </li> */}
                         <li>
                             <i className='bx bx-user'></i>
                             <Link className='Link' to={isLoggedIn ? "/profile" : "/login"} onClick={toggleSidebar}>Profile</Link>
-                        </li> */}
+                        </li>
                         <li>
                             <img style={{ margin: '0px', padding: '0px' }} className='shopping-bag' src={shopping_bag} alt="Cart" />
                             <Link className='Link' to="/cart" onClick={toggleSidebar}>Cart</Link>

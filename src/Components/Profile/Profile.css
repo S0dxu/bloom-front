@@ -100,3 +100,23 @@
     font-family: "Poppins";
 
 }
+
+@media (max-width: 600px) {
+    .profile-cnt .left {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .profile-cnt .profile-section {
+        flex-direction: column;
+        display: flex;
+        text-align: center;
+        width: calc(100vw - 30px);
+        align-items: center;
+    }
+
+    .profile-cnt .profile-desc {
+        margin-top: -20px;
+    }
+}

@@ -13,7 +13,7 @@ import women_banner from './Components/Assets/banner_women.png';
 import kids_banner from './Components/Assets/banner_kids.png';
 import Favorites from './Components/Favorites/Favorites';
 import { Link } from 'react-router-dom';
-/* import Profile from './Components/Profile/Profile'; */
+import Profile from './Components/Profile/Profile';
 import PaymentGateway from './Components/PaymentGateway/PaymentGateway';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
@@ -47,7 +47,7 @@ function App() {
             <Route path="/women" element={<ShopCategory banner={women_banner} category="women" />} />
             <Route path="/kids" element={<ShopCategory banner={kids_banner} category="kids" />} />
             <Route path="/product/:productId" element={<Product />} />
-            {/* <Route path="/profile" element={<Profile />} /> */}
+            <Route path="/profile" element={<Profile />} />
             <Route path="/payment" element={<PaymentGateway />} />
             <Route path="/getfavorites" element={<Favorites />} />
             <Route path="/cart" element={<Cart />} />
