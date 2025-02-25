@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Navbar.css';
 import logo from '../Assets/bloom2.png';
 import menu_icon2 from '../Assets/menu (1).png';
@@ -9,6 +9,7 @@ import { ShopContext } from '../../Context/ShopContext';
 import Search from '../Search/Search';
 
 const Navbar = () => {
+    const navigate = useNavigate();
     const { getTotalCartItems } = useContext(ShopContext);
     const [menu, setMenu] = useState('shop');
     const [showNavbar, setShowNavbar] = useState(true);
@@ -20,6 +21,12 @@ const Navbar = () => {
     const sidebarRef = useRef(null);
 
     let lastScroll = 0;
+
+    const handleLogout = () => {
+        localStorage.removeItem('auth-token');
+        navigate('/');
+        window.location.reload();
+    };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -162,6 +169,10 @@ const Navbar = () => {
                         <li>
                             <img style={{ margin: '0px', padding: '0px' }} className='shopping-bag' src={shopping_bag} alt="Cart" />
                             <Link className='Link' to="/cart" onClick={toggleSidebar}>Cart</Link>
+                        </li>
+                        <li onClick={handleLogout}>
+                            <i className='bx bx-log-out-circle' ></i>
+                            <Link>Logout</Link>
                         </li>
                     </div>
                 </ul>
