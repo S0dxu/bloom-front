@@ -144,7 +144,7 @@ const ProductDisplay = (props) => {
 
     const handleAddToCart = () => {
         if (!selectedSize) {
-            alert('Please select a size');
+            setSizeMessage('Please select a size');
             return;
         }
     
@@ -153,19 +153,19 @@ const ProductDisplay = (props) => {
 
         const selectedSizeData = product.sizes.find((size) => size.name === selectedSize);
         if (!selectedSizeData) {
-            alert('Selected size not found');
+            setSizeMessage('Selected size not found');
             return;
         }
     
         const availableQuantity = selectedSizeData.quantity;
 
         if (currentQuantity >= 5) {
-            alert('You cannot add more than 5 of this item.');
+            setSizeMessage('You cannot add more than 5 of this item.');
             return;
         }
 
         if (currentQuantity >= availableQuantity) {
-            alert(`You cannot add more than ${availableQuantity} of this size.`);
+            setSizeMessage(`You cannot add more than ${availableQuantity} of this size.`);
             return;
         }
 

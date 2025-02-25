@@ -45,14 +45,18 @@
 
 .sort-menu {
     position: absolute;
-    background: white;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid #eee;
     z-index: 4;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 2px;
     font-size: 16px;
     top: 30px;
     width: 140px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
+
 
 .sort-menu div:hover {
     color: #707070;
@@ -91,17 +95,15 @@
     .all-products .sort {
         cursor: pointer;
         position: absolute;
-        bottom: 59px;
-        right: 20px;
-        font-size: 16px;
+        bottom: 61px;
+        right: 5px;
+        font-size: 14px;
     }
     
     .sort-menu {
         position: absolute;
-        background: white;
         z-index: 4;
         padding: 20px;
-        border-radius: 10px;
         font-size: 16px;
         top: 30px;
         right: -20px;

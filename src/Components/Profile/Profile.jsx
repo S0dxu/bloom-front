@@ -172,10 +172,10 @@ const Profile = () => {
                             <h2>{userData.name || 'User'}</h2>
                             <p>Email: {userData.email || 'N/A'}</p>
                             <p>Member since {userData.date || 'N/A'}</p>
-                            <div className="logout-cnt" onClick={handleLogout}>
+                            {userData.date ? <div className="logout-cnt" onClick={handleLogout}>
                                 <i className='bx bx-log-out-circle' ></i>
                                 <p>Logout</p>
-                            </div>
+                            </div> : ""}
                         </div>
                     </div>
                 )}
