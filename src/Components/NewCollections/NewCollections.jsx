@@ -36,7 +36,7 @@ const AllProducts = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await fetch('https://ah873hdsha98h2wuisah9872.onrender.com/allproducts');
+                const response = await fetch('https://bloom-backend-five.vercel.app/allproducts');
                 const data = await response.json();
                 setAllProducts(data);
             } catch (error) {

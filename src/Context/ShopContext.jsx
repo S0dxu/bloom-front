@@ -12,12 +12,12 @@ const ShopContextProvider = (props) => {
     const [cartItems, setCartItems] = useState(getDefaultCart());
 
     useEffect(() => {
-        fetch('https://ah873hdsha98h2wuisah9872.onrender.com/allproducts')
+        fetch('https://bloom-backend-five.vercel.app/allproducts')
             .then((response) => response.json())
             .then((data) => setAll_Product(data));
 
         if (localStorage.getItem('auth-token')) {
-            fetch('https://ah873hdsha98h2wuisah9872.onrender.com/getcart', {
+            fetch('https://bloom-backend-five.vercel.app/getcart', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',
@@ -46,7 +46,7 @@ const ShopContextProvider = (props) => {
             }
 
             if (localStorage.getItem('auth-token')) {
-                fetch('https://ah873hdsha98h2wuisah9872.onrender.com/addtocart', {
+                fetch('https://bloom-backend-five.vercel.app/addtocart', {
                     method: 'POST',
                     headers: {
                         Accept: 'application/json',
@@ -80,7 +80,7 @@ const ShopContextProvider = (props) => {
             }
 
             if (localStorage.getItem('auth-token')) {
-                fetch('https://ah873hdsha98h2wuisah9872.onrender.com/addtocart', {
+                fetch('https://bloom-backend-five.vercel.app/addtocart', {
                     method: 'POST',
                     headers: {
                         Accept: 'application/json',
@@ -105,7 +105,7 @@ const ShopContextProvider = (props) => {
     const removeToCart = (productKey) => {
         const [productId, size] = productKey.split('-');
 
-        fetch('https://ah873hdsha98h2wuisah9872.onrender.com/removetocart', {
+        fetch('https://bloom-backend-five.vercel.app/removetocart', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',

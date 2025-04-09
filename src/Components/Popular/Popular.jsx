@@ -7,7 +7,7 @@ const Popular = () => {
     const [ popularInWomen, setPopularProducts ] = useState([])
 
     useEffect(() => {
-        fetch('https://ah873hdsha98h2wuisah9872.onrender.com/popularinwomen')
+        fetch('https://bloom-backend-five.vercel.app/popularinwomen')
         .then((response) => response.json())
         .then((data) => setPopularProducts(data))
     }, [])

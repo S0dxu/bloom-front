@@ -20,7 +20,7 @@ const Profile = () => {
             }
 
             try {
-                const response = await fetch('https://ah873hdsha98h2wuisah9872.onrender.com/getuser', {
+                const response = await fetch('https://bloom-backend-five.vercel.app/getuser', {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ const Profile = () => {
     const handleAddAddress = async () => {
         const token = localStorage.getItem('auth-token');
         try {
-            const response = await fetch('https://ah873hdsha98h2wuisah9872.onrender.com/addaddress', {
+            const response = await fetch('https://bloom-backend-five.vercel.app/addaddress', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -110,7 +110,7 @@ const Profile = () => {
         }
 
         try {
-            const response = await fetch('https://ah873hdsha98h2wuisah9872.onrender.com/updateprofile', {
+            const response = await fetch('https://bloom-backend-five.vercel.app/updateprofile', {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

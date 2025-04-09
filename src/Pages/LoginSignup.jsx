@@ -44,7 +44,7 @@ const LoginSignup = () => {
         }
     
         let responseData;
-        await fetch("https://ah873hdsha98h2wuisah9872.onrender.com/login", {
+        await fetch("https://bloom-backend-five.vercel.app/login", {
             method: 'POST',
             headers: {
                 Accept: 'application/json',
@@ -78,7 +78,7 @@ const LoginSignup = () => {
         }
     
         let responseData;
-        await fetch("https://ah873hdsha98h2wuisah9872.onrender.com/signup", {
+        await fetch("https://bloom-backend-five.vercel.app/signup", {
             method: 'POST',
             headers: {
                 Accept: 'application/json',
