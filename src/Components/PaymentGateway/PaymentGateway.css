@@ -238,6 +238,11 @@
 }
 
 @media (max-width: 1000px) {
+    .paymentgateway,
+    .all-products {
+        overflow-X: hidden !important;
+    }
+
     .paymentgateway-cnt {
         display: flex;
         flex-direction: column-reverse;

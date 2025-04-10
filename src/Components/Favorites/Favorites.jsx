@@ -136,10 +136,10 @@ const Favorites = () => {
                                             </div>
                                         )}
                                     </div>
-                                    {product.new_price === 0 && <p className="discount">Save 100%</p>}
+                                    {/* {product.new_price === 0 && <p className="discount">Save 100%</p>}
                                     {discount > 0 && product.new_price !== 0 && (
                                         <p className="discount">Save {discount}%</p>
-                                    )}
+                                    )} */}
                                 </div>
                             </div>
                         );
@@ -148,7 +148,8 @@ const Favorites = () => {
             ) : (
                 <p className='no-item'>You have no favorite items yet.</p>
             )}
-
+            <br />
+            <br />
             <h1>Find your next favorite item</h1>
             {randomProducts.length > 0 ? (
                 <div className="favorites-list">
@@ -178,10 +179,10 @@ const Favorites = () => {
                                             </div>
                                         )}
                                     </div>
-                                    {product.new_price === 0 && <p className="discount">Save 100%</p>}
+                                    {/* {product.new_price === 0 && <p className="discount">Save 100%</p>}
                                     {discount > 0 && product.new_price !== 0 && (
                                         <p className="discount">Save {discount}%</p>
-                                    )}
+                                    )} */}
                                 </div>
                             </div>
                         );
@@ -190,6 +191,7 @@ const Favorites = () => {
             ) : (
                 <p className='no-item'>No products available.</p>
             )}
+            <br />
         </div>
     );
 };

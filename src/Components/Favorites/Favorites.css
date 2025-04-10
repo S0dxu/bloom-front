@@ -35,7 +35,7 @@
 
 .favorites-list img {
     width: 100%;
-    height: 70%;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
 }
 
@@ -48,6 +48,10 @@
 
 .favorite-item {
     position: relative;
+}
+
+.favorite-item .item-prices {
+    gap: 10px;
 }
 
 .favorites .name {
