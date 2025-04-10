@@ -69,10 +69,9 @@
     .item .item-price-new,
     .item .item-price-old {
         font-size: 16px;
-        font-weight: 400;
     }
 
     .item-prices {
-        gap: 10px;
+        gap: 0;
     }
 }
