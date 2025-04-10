@@ -97,10 +97,10 @@ const Item = (props) => {
                     </div>
                 )}
             </div>
-            {props.new_price === 0 && <p className="discount">Save 100%</p>}
+            {/* {props.new_price === 0 && <p className="discount">Save 100%</p>}
             {discount > 0 && props.new_price !== 0 && (
                 <p className="discount">Save {discount}%</p>
-            )}
+            )} */}
         </div>
     );
 };
