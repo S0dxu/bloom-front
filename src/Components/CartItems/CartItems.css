@@ -41,33 +41,45 @@
     margin-left: 30px;
 }
 
+.cartitems .fuckyou p {
+    max-width: calc(100dvw - 280px);
+
+}
+
 .cartitems-format-main .name {
     color: #000;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 18px;
+
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
-.cartitems .fuckyou {
-    width: 100%;
+
+.cartitems .price {
+    width: fit-content;
 }
 
-.cartitems .fuckyou p {
-    max-width: fit-content;
+.fuckyou .size {
+    font-size: 14px;
+    width: fit-content;
 }
 
 .cartitems-format-main .price {
     bottom: 15px;
     color: #000;
-    font-size: 22px;
-    position: absolute;
+    font-size: 18px;
+    position: relative;
     font-weight: 500;
+    margin-top: 30px;
 }
 
 .cartitems-format-main .old_price {
     bottom: 40px;
     text-decoration: line-through;
-    font-size: 16px;
-    position: absolute;
+    font-size: 14px;
+    position: relative;
 }
 
 .cartitems-format-main .gift {
@@ -241,8 +253,7 @@
     }
 
     .cartitems .fuckyou{
-       left: -20px;
-       position: relative;
+       width: 50dvw;
     }
 
     .cartitems .mobile p {
@@ -278,5 +289,16 @@
         display: flex;
         margin-top: 30px;
         width: 80%;
+    }
+}
+
+@media (max-width: 600px) {
+    .carticon-product-icon{
+        width: 40dvw;
+        max-width: 200px;
+        max-height: 200px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
     }
 }

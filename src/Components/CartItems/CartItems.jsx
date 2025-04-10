@@ -147,7 +147,7 @@ const CartItems = (props) => {
                                         <p className='name'>{product.name}</p>
                                         <p className='size'>size: {size}</p>
                                         {/* <p className='gift'>Gift Options</p> */}
-                                        <p className='old_price'>{product.old_price > 0 ? `€${product.old_price * cartItems[productKey]}` : null}</p>
+                                        {/* <p className='old_price'>{product.old_price > 0 ? `€${product.old_price * cartItems[productKey]}` : null}</p> */}
                                         <p className='price'>
                                             {product.new_price * cartItems[productKey] === 0 ? 'FREE' : `€${product.new_price * cartItems[productKey]}`}
                                         </p>
