@@ -88,13 +88,13 @@ const Item = (props) => {
             <p className="category">{props.category}'s shoes</p>
             <p className="colour">1 Colour</p>
             <div className="item-prices">
-                <div className="item-price-new">
+                <p className="item-price-new">
                     {props.new_price === 0 ? 'FREE' : `€${props.new_price}`}
-                </div>
+                </p>
                 {props.old_price > props.new_price && (
-                    <div className="item-price-old">
+                    <p className="item-price-old">
                         <s>€{props.old_price}</s>
-                    </div>
+                    </p>
                 )}
             </div>
             {/* {props.new_price === 0 && <p className="discount">Save 100%</p>}
