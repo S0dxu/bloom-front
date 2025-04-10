@@ -87,6 +87,11 @@
         font-size: 18px;
     }
 
+    .cnt-products-header h1,
+    .cnt-products-header h2 {
+        padding-left: 10px !important;
+    }
+
     .cnt-products-header h2 {
         font-size: 15px;
         padding: 5px;
@@ -97,7 +102,7 @@
         cursor: pointer;
         position: absolute;
         bottom: 61px;
-        right: 5px;
+        right: 15px;
         font-size: 14px;
     }
     
