@@ -306,12 +306,12 @@
     }
 
     .productdisplay .productdisplay-right-price-old {
-        font-weight: 300;
+        font-weight: 400;
     }
 
     .productdisplay .productdisplay-price-div {
         flex-direction: row;
         display: flex;
-        gap: 5px;
+        gap: 10px;
     }
 }
