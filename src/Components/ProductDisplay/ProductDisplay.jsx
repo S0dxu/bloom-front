@@ -174,6 +174,32 @@ const ProductDisplay = (props) => {
 
     return (
         <div className='productdisplay'>
+            <h1 className='name'>{product.name}</h1>
+            <p className="cate">{product.category.charAt(0).toUpperCase() + product.category.slice(1)}'s Shoes</p>
+            <div className="productdisplay-right-prices">
+                {product.new_price === 0 && (
+                    <div className="productdisplay-right-price-new">FREE</div>
+                )}
+                {product.new_price > 0 && product.old_price > product.new_price && (
+                    <div className='productdisplay-price-div'>
+                        <div className="productdisplay-right-price-new">€{product.new_price}</div>
+                        <div className="productdisplay-right-price-old">€{product.old_price}</div>
+                        
+                        <div>
+                            {product.new_price === 0 && (
+                                <p className="discount">Save 100%</p>
+                            )}
+                            {product.old_price > product.new_price && (
+                                <p className="discount">Save {Math.round(((product.old_price - product.new_price) / product.old_price) * 100)}%</p>
+                            )}
+                        </div>
+                    </div>
+                )}
+                {product.new_price > 0 && product.old_price <= product.new_price && (
+                    <div className="productdisplay-right-price-new">€{product.new_price}</div>
+                )}
+            </div>
+
             <div className="productdisplay-left">
                 <div className="productdisplay-img-container">
                     <button className="arrow left-arrow" onClick={handlePreviousImage}>
@@ -199,28 +225,6 @@ const ProductDisplay = (props) => {
             <div className="productdisplay-right">
                 <h1 className='pc'>{product.name}</h1>
                 <p className="category pc">{product.category.charAt(0).toUpperCase() + product.category.slice(1)}'s Shoes</p>
-                <div className="productdisplay-right-prices">
-                    {product.new_price === 0 && (
-                        <div className="productdisplay-right-price-new">FREE</div>
-                    )}
-                    {product.new_price > 0 && product.old_price > product.new_price && (
-                        <>
-                            <div className="productdisplay-right-price-old">€{product.old_price}</div>
-                            <div className="productdisplay-right-price-new">€{product.new_price}</div>
-                        </>
-                    )}
-                    {product.new_price > 0 && product.old_price <= product.new_price && (
-                        <div className="productdisplay-right-price-new">€{product.new_price}</div>
-                    )}
-                </div>
-                <div>
-                    {product.new_price === 0 && (
-                        <p className="discount">Save 100%</p>
-                    )}
-                    {product.old_price > product.new_price && (
-                        <p className="discount">Save {Math.round(((product.old_price - product.new_price) / product.old_price) * 100)}%</p>
-                    )}
-                </div>
                 <div className="productdisplay-description">
                     <p>{product.description}</p>
                 </div>
