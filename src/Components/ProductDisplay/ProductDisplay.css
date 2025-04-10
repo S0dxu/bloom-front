@@ -316,6 +316,6 @@
     .productdisplay .productdisplay-price-div {
         flex-direction: row;
         display: flex;
-        gap: 15px;
+        gap: 10px;
     }
 }
