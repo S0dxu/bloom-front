@@ -24,9 +24,8 @@
 }
 
 .cartitems-format-main{
-    display: grid;
-    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr;
-    padding: 20px 0px;
+    display: flex;
+
     color: #707072;
     font-size: 18px;
     font-weight: 600;
@@ -56,7 +55,6 @@
     overflow-wrap: break-word;
 }
 
-
 .cartitems .price {
     width: fit-content;
 }
@@ -72,7 +70,7 @@
     font-size: 18px;
     position: relative;
     font-weight: 500;
-    margin-top: 30px;
+    margin-top: 30px !important;
 }
 
 .cartitems-format-main .old_price {
@@ -252,10 +250,6 @@
         margin-bottom: -10px;
     }
 
-    .cartitems .fuckyou{
-       width: 50dvw;
-    }
-
     .cartitems .mobile p {
         font-size: 16px;
         margin-bottom: 20px !important;
@@ -301,4 +295,30 @@
         aspect-ratio: 1 / 1;
         object-fit: cover;
     }
+
+    .cartitems-format {
+        width: calc(100% - 20px);
+        overflow: hidden;
+        padding: 0;
+        display: flex;
+        gap: 10px;
+    }
+
+    .fuckyou {
+        width: 100% !important;
+    }
+
+    .cartitems .fuckyou p {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        min-width: fit-content !important;
+    }
+    
+    .cartitems-format-main .name {
+        color: #000;
+        font-weight: 500;
+        font-size: 18px;
+    }
+    
 }
