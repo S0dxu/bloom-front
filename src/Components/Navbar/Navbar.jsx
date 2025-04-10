@@ -93,7 +93,7 @@ const Navbar = () => {
             <div className={`navbar ${showNavbar ? 'show' : 'hide'} ${isSidebarOpen ? 'navbar-opacity' : ''}`}>
                 <div className="nav-logo">
                     <Link to="/">
-                            <img src={logo} alt="Logo" />
+                        <img src={logo} alt="Logo" />
                     </Link>
                 </div>
                 <ul className="nav-menu">

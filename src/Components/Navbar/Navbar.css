@@ -43,6 +43,8 @@
 
 .nav-logo img {
     width: 120px;
+    height: 80px;
+    object-fit: cover;
 }
 
 .nav-login-menu {
