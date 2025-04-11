@@ -6,6 +6,7 @@ const AllProducts = () => {
     const [allProducts, setAllProducts] = useState([]);
     const [sortVisible, setSortVisible] = useState(false);
     const [sortOption, setSortOption] = useState('Name: A to Z');
+    const [visibleCount, setVisibleCount] = useState(30);
 
     const sortMenuRef = useRef(null);
 
@@ -20,6 +21,7 @@ const AllProducts = () => {
         setSortOption(option);
         const sortedProducts = [...allProducts].sort(sortMapping[option]);
         setAllProducts(sortedProducts);
+        setVisibleCount(30);
         setSortVisible(false);
     };
 
@@ -38,7 +40,7 @@ const AllProducts = () => {
             try {
                 const response = await fetch('https://bloom-backend-five.vercel.app/allproducts');
                 const data = await response.json();
-                setAllProducts(data);
+                setAllProducts(data.sort(sortMapping[sortOption]));
             } catch (error) {
                 console.error('Error fetching all products:', error);
             }
@@ -59,6 +61,21 @@ const AllProducts = () => {
         };
     }, [sortVisible]);
 
+    useEffect(() => {
+        const handleScroll = () => {
+            if (
+                window.innerHeight + window.scrollY >= document.body.offsetHeight - 500 &&
+                visibleCount < allProducts.length
+            ) {
+                setVisibleCount((prev) => Math.min(prev + 30, allProducts.length));
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [visibleCount, allProducts.length]);
+
+    const displayedProducts = allProducts.slice(0, visibleCount);
     const totalProducts = allProducts.length;
 
     return (
@@ -91,9 +108,9 @@ const AllProducts = () => {
                     </div>
                 </div>
             </div>
-            
+
             <div className="product-list">
-                {allProducts.map((product) => (
+                {displayedProducts.map((product) => (
                     <Item
                         key={product.id}
                         id={product.id}
@@ -105,6 +122,10 @@ const AllProducts = () => {
                     />
                 ))}
             </div>
+
+            {visibleCount >= totalProducts && (
+                <p className="no-more">Non ci sono altri prodotti da mostrare.</p>
+            )}
         </div>
     );
 };
