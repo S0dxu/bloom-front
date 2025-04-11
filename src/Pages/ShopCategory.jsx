@@ -9,7 +9,7 @@ const ShopCategory = (props) => {
     const { all_product } = useContext(ShopContext);
 
     const [sortVisible, setSortVisible] = useState(false);
-    const [sortOption, setSortOption] = useState('');
+    const [sortOption, setSortOption] = useState('Name: A to Z');
     const [visibleCount, setVisibleCount] = useState(30);
 
     const sortMenuRef = useRef(null);
@@ -21,11 +21,11 @@ const ShopCategory = (props) => {
         'Name: Z to A': (a, b) => b.name.localeCompare(a.name),
     };
 
-    const filteredProducts = [...all_product]
+    const sortedProducts = [...all_product]
         .filter(item => item.category === props.category)
         .sort(sortMapping[sortOption] || (() => 0));
 
-    const visibleProducts = filteredProducts.slice(0, visibleCount);
+    const visibleProducts = sortedProducts.slice(0, visibleCount);
 
     const toggleSortMenu = () => {
         setSortVisible(!sortVisible);
@@ -59,27 +59,27 @@ const ShopCategory = (props) => {
         const handleScroll = () => {
             if (
                 window.innerHeight + window.scrollY >= document.body.offsetHeight - 500 &&
-                visibleCount < filteredProducts.length
+                visibleCount < sortedProducts.length
             ) {
-                setVisibleCount(prev => Math.min(prev + 30, filteredProducts.length));
+                setVisibleCount(prev => Math.min(prev + 30, sortedProducts.length));
             }
         };
 
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
-    }, [visibleCount, filteredProducts.length]);
+    }, [visibleCount, sortedProducts.length]);
 
     return (
         <div className='shop-category'>
             <div className="shopcategory-indexSort">
                 <div className='lenght'>
                     <p>{props.category.charAt(0).toUpperCase() + props.category.slice(1)}'s Shoes</p>
-                    <div className='pc'>({filteredProducts.length})</div>
+                    <div className='pc'>({sortedProducts.length})</div>
                 </div>
 
                 <div className="shopcategory-sort" ref={sortMenuRef}>
                     <div onClick={toggleSortMenu} className="sort-label">
-                        Sort by {sortOption || 'Default'} <i className='bx bx-slider-alt'></i>
+                        {sortOption || 'Default'} <i className='bx bx-slider-alt'></i>
                     </div>
                     {sortVisible && (
                         <div className="sort-menu">
@@ -99,7 +99,7 @@ const ShopCategory = (props) => {
 
             <div className="mobile">
                 <hr />
-                <p className='results'>{filteredProducts.length} Results</p>
+                <p className='results'>{sortedProducts.length} Results</p>
             </div>
 
             <div className="shopcategory-products">
@@ -117,7 +117,7 @@ const ShopCategory = (props) => {
                 ))}
             </div>
 
-            {visibleCount >= filteredProducts.length && (
+            {visibleCount >= sortedProducts.length && (
                 <p className="no-more"></p>
             )}
         </div>
