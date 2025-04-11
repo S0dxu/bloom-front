@@ -112,7 +112,7 @@
     }
 
     .shopcategory-products {
-        gap: 5px;
+        gap: 5px !important;
     }
 
     .shopcategory-sort {
