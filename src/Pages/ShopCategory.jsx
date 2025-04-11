@@ -118,7 +118,7 @@ const ShopCategory = (props) => {
             </div>
 
             {visibleCount >= filteredProducts.length && (
-                <p className="no-more">Non ci sono altri prodotti da mostrare.</p>
+                <p className="no-more">No products</p>
             )}
         </div>
     );
