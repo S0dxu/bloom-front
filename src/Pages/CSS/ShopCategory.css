@@ -147,6 +147,7 @@
     }    
 }
 
+
 @media (max-width: 400px) {
     .navbar-bottom {
         flex-direction: column;
