@@ -37,7 +37,7 @@ const AllProducts = () => {
         setLoading(true);
         try {
             const res = await fetch(
-                `http://localhost:4000/allproducts?page=${pageToLoad}&limit=${limit}&sort=${sortMapping[sortOption]}`
+                `https://bloom-backend-five.vercel.app/allproducts?page=${pageToLoad}&limit=${limit}&sort=${sortMapping[sortOption]}`
             );
             const data = await res.json();
 
