@@ -10,6 +10,8 @@ const ShopCategory = (props) => {
 
     const [sortVisible, setSortVisible] = useState(false);
     const [sortOption, setSortOption] = useState('');
+    const [visibleCount, setVisibleCount] = useState(30);
+
     const sortMenuRef = useRef(null);
 
     const sortMapping = {
@@ -23,6 +25,8 @@ const ShopCategory = (props) => {
         .filter(item => item.category === props.category)
         .sort(sortMapping[sortOption] || (() => 0));
 
+    const visibleProducts = filteredProducts.slice(0, visibleCount);
+
     const toggleSortMenu = () => {
         setSortVisible(!sortVisible);
     };
@@ -30,6 +34,7 @@ const ShopCategory = (props) => {
     const handleSortChange = (option) => {
         setSortOption(option);
         setSortVisible(false);
+        setVisibleCount(30);
     };
 
     const handleClickOutside = (event) => {
@@ -50,6 +55,20 @@ const ShopCategory = (props) => {
         };
     }, [sortVisible]);
 
+    useEffect(() => {
+        const handleScroll = () => {
+            if (
+                window.innerHeight + window.scrollY >= document.body.offsetHeight - 500 &&
+                visibleCount < filteredProducts.length
+            ) {
+                setVisibleCount(prev => Math.min(prev + 30, filteredProducts.length));
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [visibleCount, filteredProducts.length]);
+
     return (
         <div className='shop-category'>
             <div className="shopcategory-indexSort">
@@ -60,7 +79,7 @@ const ShopCategory = (props) => {
 
                 <div className="shopcategory-sort" ref={sortMenuRef}>
                     <div onClick={toggleSortMenu} className="sort-label">
-                        Sort by {sortOption} <i className='bx bx-slider-alt'></i>
+                        Sort by {sortOption || 'Default'} <i className='bx bx-slider-alt'></i>
                     </div>
                     {sortVisible && (
                         <div className="sort-menu">
@@ -77,12 +96,14 @@ const ShopCategory = (props) => {
                     )}
                 </div>
             </div>
+
             <div className="mobile">
                 <hr />
                 <p className='results'>{filteredProducts.length} Results</p>
             </div>
+
             <div className="shopcategory-products">
-                {filteredProducts.map((item, i) => (
+                {visibleProducts.map((item, i) => (
                     <Item 
                         key={i} 
                         id={item.id} 
@@ -95,6 +116,10 @@ const ShopCategory = (props) => {
                     />
                 ))}
             </div>
+
+            {visibleCount >= filteredProducts.length && (
+                <p className="no-more">Non ci sono altri prodotti da mostrare.</p>
+            )}
         </div>
     );
 }
