@@ -143,7 +143,7 @@ const RelatedProducts = () => {
                         </div>
                     ))
                 ) : (
-                    <div>No related products found.</div>
+                    <div className="loader"></div>
                 )}
             </div>
         </div>

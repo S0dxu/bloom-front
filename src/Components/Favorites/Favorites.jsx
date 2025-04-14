@@ -146,7 +146,7 @@ const Favorites = () => {
                     })}
                 </div>
             ) : (
-                <p className='no-item'>You have no favorite items yet.</p>
+                <div class="loader"></div>
             )}
             <br />
             <br />
@@ -189,7 +189,7 @@ const Favorites = () => {
                     })}
                 </div>
             ) : (
-                <p className='no-item'>No products available.</p>
+                <div class="loader"></div>
             )}
             <br />
         </div>

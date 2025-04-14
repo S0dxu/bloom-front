@@ -10,6 +10,12 @@ const Shop = () => {
     const { all_product } = useContext(ShopContext);
     const product = all_product?.[0];
 
+/*     if (!product) {
+        return (
+            <div class="loader"></div>
+        );
+    } */
+
     return (
         <div>
             {/* <Hero/>

@@ -13,8 +13,7 @@ const Product = () => {
 
     if (!product) {
         return (
-            <div>
-            </div>
+            <div className="loader"></div>
         );
     }
 

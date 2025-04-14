@@ -7,6 +7,7 @@ const AllProducts = () => {
   const [sortVisible, setSortVisible] = useState(false);
   const [sortOption, setSortOption] = useState('Name: A to Z');
   const [visibleCount, setVisibleCount] = useState(30);
+  const [loading, setLoading] = useState(true);
   const sortMenuRef = useRef(null);
 
   const sortMapping = {
@@ -39,11 +40,15 @@ const AllProducts = () => {
       try {
         const response = await fetch('https://bloom-backend-five.vercel.app/allproducts');
         const data = await response.json();
-        setAllProducts(Array.isArray(data) ? data.sort(sortMapping[sortOption]) : []);
+        const sortedData = Array.isArray(data) ? data.sort(sortMapping[sortOption]) : [];
+        setAllProducts(sortedData);
+        setLoading(false);
       } catch (error) {
-        console.error('Error fetching all products:', error);
+        console.error('Errore nel fetch:', error);
+        setLoading(false);
       }
     };
+
     fetchProducts();
   }, []);
 
@@ -53,9 +58,7 @@ const AllProducts = () => {
     } else {
       document.removeEventListener('mousedown', handleClickOutside);
     }
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [sortVisible]);
 
   useEffect(() => {
@@ -68,8 +71,14 @@ const AllProducts = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [visibleCount, allProducts.length]);
 
-  const displayedProducts = Array.isArray(allProducts) ? allProducts.slice(0, visibleCount) : [];
-  const totalProducts = Array.isArray(allProducts) ? allProducts.length : 0;
+  const displayedProducts = allProducts.slice(0, visibleCount);
+  const totalProducts = allProducts.length;
+
+  if (loading) {
+    return (
+      <div className="loader" />
+    );
+  }
 
   return (
     <div className='all-products'>
@@ -97,6 +106,7 @@ const AllProducts = () => {
           </div>
         </div>
       </div>
+
       <div className="product-list">
         {displayedProducts.map((product) => (
           <Item
@@ -110,9 +120,8 @@ const AllProducts = () => {
           />
         ))}
       </div>
-      {visibleCount >= totalProducts && (
-        <p className="no-more"></p>
-      )}
+
+      {visibleCount >= totalProducts && <p className="no-more"></p>}
     </div>
   );
 };

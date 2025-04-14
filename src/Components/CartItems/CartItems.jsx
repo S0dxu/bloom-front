@@ -111,6 +111,14 @@ const CartItems = (props) => {
         return Object.values(cartItems).reduce((total, quantity) => total + quantity, 0);
     };
 
+    if (!all_product || all_product.length === 0) {
+        return (
+            <div className="loader-wrapper">
+                <div className="loader"></div>
+            </div>
+        );
+    }    
+
     return (
         <div className='cartitems'>
             <div className="cartitems-list">

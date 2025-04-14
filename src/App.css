@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+.loader {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #c0c0c0;
+  border-top: 1px solid #000;
+  border-radius: 50%;
+  animation: spin 0.5s linear infinite;
+  margin: calc(50dvh - 200px) auto;
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
